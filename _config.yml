@@ -76,8 +76,8 @@ theme: vexo
 # typography
 # micorb
 # pln
-# vexo Green
-# indigo Blue
+# vexo (Green)
+# indigo (Blue)
 
 # Generator atom feed for you website
 feed:
@@ -98,5 +98,6 @@ deploy:
 
 backup:
   type: git
+  theme: vexo
   repository:
     github: git@github2:NJUCSE17/hexo-backup.git
