@@ -98,6 +98,5 @@ deploy:
 
 backup:
   type: git
-  theme: vexo
   repository:
     github: git@github2:NJUCSE17/hexo-backup.git
