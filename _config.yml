@@ -6,7 +6,7 @@
 title: NJUCSE17
 subtitle: problem solving
 description: 
-author: Fancy
+author: CSE
 language: zh-cn
 timezone:
 
@@ -69,19 +69,10 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-# Security
-encrypt:
-    enable: true
-
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: vexo
-# typography
-# micorb
-# pln
-# vexo (Green)
-# indigo (Blue)
 
 # Generator atom feed for you website
 feed:
@@ -99,9 +90,3 @@ deploy:
   type: git
   repo: git@github.com:NJUCSE17/njucse17.github.io.git
   branch: master
-
-backup:
-  type: git
-  theme: vexo
-  repository:
-    github: git@github2:NJUCSE17/hexo-backup.git
