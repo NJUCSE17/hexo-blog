@@ -69,6 +69,10 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+# Security
+encrypt:
+    enable: true
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -88,12 +92,12 @@ feed:
   content:
   content_limit: 140
   content_limit_delim: ' '
-
+  
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github2:NJUCSE17/njucse17.github.io.git
+  repo: git@github.com:NJUCSE17/njucse17.github.io.git
   branch: master
 
 backup:
