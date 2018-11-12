@@ -10,12 +10,14 @@ menu:
  Tags: /tags/
  Archives: /archives/
 # Projects: /project/
-# About: /about/
+ About: /about/
 
 # highlight
 highlight:
   default
 
+comment: true
+  
 # catalog
 catalog: true
 

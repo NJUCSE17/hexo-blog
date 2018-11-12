@@ -1,6 +1,10 @@
 <div id="article-banner">
   <h2><%- page.title %></h2>
-  <p class="post-date"><%- date(page.date, "YYYY-MM-DD") %></p>
+  <p class="post-date"><%- date(page.date, "YYYY-MM-DD") %>
+    <% if (page.author) { %>
+	  by <%- page.author %>
+    <% } %>
+  </p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -9,6 +13,7 @@
   <!-- Article START -->
   <article class="post-article">
     <section class="markdown-content"><%- page.content %></section>
+	
     <!-- Tags START -->
     <% if (page.tags && page.tags.length) { %>
       <div class="tags">
@@ -17,20 +22,13 @@
       </div>
     <% } %>
     <!-- Tags END -->
+	
     <!-- NAV START -->
     <%- partial('_partial/nav') %>
     <!-- NAV END -->
-    <% if (theme.comment === 'gitment') { %>
-      <!-- Gitment START -->
-      <div id="comments"></div>
-      <!-- Gitment END -->
-    <% } else if (theme.comment === 'uyan') { %>
-      <!-- UY START -->
-      <div id="uyan_frame"></div>
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
-      <!-- UY END -->
-    <% } else { %>
-	  <!-- Valine START -->
+	
+	<!-- Comment Valine START -->
+    <% if (theme.comment) { %>
       <div id="comment" style="margin-top:25px;"></div>
       <script>
         new Valine({
@@ -41,18 +39,22 @@
         appKey: 'SzcPQcImGDrHMCFNH68MVtAj',
         placeholder: 'ヾﾉ≧∀≦)o 来啊, 快活啊! (头像是 Gravatar，滋瓷 Markdown)',
         path: window.location.pathname, 
-        avatar: 'mm' 
+        avatar: 'mm',
+		visitor: true // 阅读量统计
       });
       </script>
-	  <!-- Valine END -->
     <% } %>
+	<!-- Comment Valine END -->
+	
   </article>
   <!-- Article END -->
+  
   <!-- Catalog START -->
-  <% if (theme.catalog) { %>
+  <% if (page.catalog != false) { %>
     <%- partial('_partial/catalog') %>
   <% } %>
   <!-- Catalog END -->
+  
 </main>
 
 <script>
