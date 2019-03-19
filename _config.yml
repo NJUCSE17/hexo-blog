@@ -88,5 +88,5 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:NJUCSE17/njucse17.github.io.git
+  repo: https://github.com/NJUCSE17/njucse17.github.io
   branch: master
